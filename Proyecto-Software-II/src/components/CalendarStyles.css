@@ -1,0 +1,112 @@
+html, body {
+  height: 100%;
+  background-color: #07498d;
+  margin: 0;
+}
+/*titulo del calendario*/
+.titulo-calendario {
+  margin-bottom: 20px;
+  color: #fff8f8;
+  font-family: "Quicksand", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Fondo general del calendario */
+.react-calendar {
+    background-color: #1d60a3b9;
+    border-radius: 12px;
+    border: 1px solid #fcded9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    padding: 16px;
+  }
+  
+  /* Casillas de días */
+  .react-calendar__tile {
+    background-color: #9da8ee;
+    color: #efe8e8;
+    font-size: 15px;
+    border-radius: 20px;
+    margin: 4px;
+    transition: all 0.3s ease;
+    position: relative; /* Añadido para posicionar el círculo */
+  } 
+  
+  /* Hover en los días */
+  .react-calendar__tile:hover {
+    background-color: #fcefe7;
+    color: #333;
+  }
+  
+  /* Día seleccionado */
+  .react-calendar__tile--active {
+    background-color: #f9c7bf !important;
+    color: white !important;
+  }
+  
+  /* Día de hoy */
+  .react-calendar__tile--now {
+    background-color: #cdeff6 !important;
+    color: #222 !important;
+  }
+  
+  /* Encabezado (mes y navegación) */
+  .react-calendar__navigation {
+    background-color: #fcefe7;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Botones de navegación */
+  .react-calendar__navigation button {
+    color: #444;
+    font-weight: bold;
+  }
+  
+  .react-calendar__navigation button:hover {
+    background-color: #f9dad2;
+  }
+
+  .react-calendar__month-view__days__day--weekend:nth-child(7n) {
+    background-color: #1a2253b7; /* Color rojo claro para domingos */
+    color: #ffffff;
+  }
+  
+  /* Sábado (último día de la semana laboral) */
+  .react-calendar__month-view__days__day--weekend:nth-child(7n + 6) {
+    background-color: #1a2253b7;
+    background-color: #1a2253b7;
+    color: #fff;
+  }
+  
+  /* para tener circulo que indica que hay actividades agendadas en un dia*/
+.activity-indicator {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: #2b0653;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+.react-calendar__tile abbr {
+  display: inline-block;
+  margin-top: 2px; /* Pequeño ajuste para evitar solapamiento */
+}
+.day-green {
+    background-color: rgba(76, 175, 80, 0.7) !important;
+    border-radius: 5px;
+}
+
+.day-red {
+    background-color: rgba(244, 67, 54, 0.7) !important;
+    border-radius: 5px;
+}
+
+.day-gray {
+    background-color: rgba(158, 158, 158, 0.7) !important;
+    border-radius: 5px;
+}
